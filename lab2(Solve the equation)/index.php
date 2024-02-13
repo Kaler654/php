@@ -19,7 +19,28 @@
         <main class="main">
             <h2 class="main__title">
                 <?php
-                    echo "Hello, World!"
+                    $equation = explode(" ", "x + 67 = 129");
+                    $operation = $equation[1];
+                    $num = ctype_digit($equation[0]) ? (int)$equation[0] : (int)$equation[2];
+                    $equals = (int)$equation[4];
+
+                    $x = "";
+
+                    if ($operation == "+") {
+                        $x = $equals - $num;
+                    } elseif ($operation == "-") {
+                        $x = $equals + $num;
+                    } elseif ($operation == "*") {
+                        $x = $equals / $num;
+                    } elseif ($operation == "/") {
+                        $x = $equals * $num;
+                    } elseif ($operation == "**") {
+                        $x = log($equals, $num);
+                    } else {
+                        $x = "Error";
+                    }
+                    
+                    echo "x = $x"
                 ?>
             </h2>
         </main>
