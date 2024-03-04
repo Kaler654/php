@@ -24,7 +24,7 @@
                     foreach ($response as $elem){
                         echo $elem . "<br>";
                     }
-                ?>
+                ?>`
                 <a href="index.html">Перейти на 1 страницу</a>
             </h2>
         </main>
