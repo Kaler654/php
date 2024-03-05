@@ -45,11 +45,11 @@
     grid-template-rows: repeat(7, 1fr);
 }
 
-.gridArea {
+.small {
     grid-column: span 1;
 }
 
-#output {
+#screen {
     grid-column: span 6;
 }
 
@@ -58,10 +58,12 @@ button {
     margin: 1px;
     margin-top: 5px;
     font-size: 24px;
+    background-color: #7828ae;
+    color: #fff;
 }
 
 
-.test {
+.form {
     max-width: 450px;
     width: 100%;
     margin: 2rem auto;
@@ -70,4 +72,12 @@ button {
 
 input {
     font-size: 32px;
+}
+
+.delete {
+    background-color: #ee9230;
+}
+
+.equal {
+    background-color: #4829f7;
 }

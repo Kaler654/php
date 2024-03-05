@@ -1,25 +1,25 @@
-const output = document.getElementById("output");
+const screen = document.getElementById("screen");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    if (button.textContent.includes("Очистить")) {
-      output.value = "";
-    } else if (button.textContent.includes("Вычислить")) {
-      calculator();
+    if (button.textContent.includes("C")) {
+      screen.value = "";
+    } else if (button.textContent.includes("=")) {
+      main();
     } else {
-      output.value = `${output.value} ${this.textContent}`;
+      screen.value = `${screen.value}${button.textContent}`;
     }
   });
 });
 
-function calculator() {
-  console.log(output.value);
+function main() {
+  console.log(screen.value);
 
-  fetch("index.php", {
+  response = fetch("index.php", {
     method: "POST",
-    body: new URLSearchParams({ val: output.value }),
+    body: new URLSearchParams({ val: screen.value }),
   })
     .then((response) => response.text())
-    .then((result) => (output.value = result));
+    .then((res) => (screen.value = res));
 }
