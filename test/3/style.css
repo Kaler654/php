@@ -1,0 +1,40 @@
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+
+.header {
+    display: flex;
+    margin-bottom: 10rem;
+}
+
+.header__logo {
+    margin-right: 30%;
+}
+
+.header__title {
+    font-size: 36px;
+}
+
+
+.footer {
+    background-color: #e6b1b1;
+}
+
+.main__title {
+    font-size: 36px;
+    text-align: center;
+}
+
+.footer__title {
+    font-size: 1.6rem;
+    text-align: center;
+}
